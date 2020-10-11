@@ -1,0 +1,122 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/main.gd" type="Script" id=1]
+[ext_resource path="res://resources/powered_by.png" type="Texture" id=2]
+[ext_resource path="res://utils/labState.tscn" type="PackedScene" id=3]
+[ext_resource path="res://resources/default_font.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 56
+font_data = ExtResource( 4 )
+
+[node name="root" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 11.0
+margin_right = -5.0
+margin_bottom = -12.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rectBgColor" type="ColorRect" parent="."]
+margin_left = -16.0
+margin_top = -20.0
+margin_right = 1027.0
+margin_bottom = 596.0
+color = Color( 1, 0.858824, 0.854902, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rectBackground" type="ColorRect" parent="."]
+margin_left = 687.96
+margin_top = 603.242
+margin_right = 1212.96
+margin_bottom = 872.242
+rect_rotation = -43.08
+color = Color( 1, 0.843137, 0.572549, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="btnMain" type="Button" parent="."]
+margin_left = 397.913
+margin_top = 177.082
+margin_right = 614.913
+margin_bottom = 255.082
+rect_pivot_offset = Vector2( 189.115, 32.2347 )
+text = "Search for server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnLocal" type="Button" parent="."]
+margin_left = 929.0
+margin_top = 70.0
+margin_right = 1005.0
+margin_bottom = 130.0
+rect_pivot_offset = Vector2( 189.115, 32.2347 )
+text = "Local"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnSettings" type="Button" parent="."]
+margin_left = 931.0
+margin_top = 5.0
+margin_right = 1004.0
+margin_bottom = 60.0
+text = "Settings"
+
+[node name="logoBuba" type="Sprite" parent="."]
+position = Vector2( 934.364, 506.147 )
+scale = Vector2( 0.276394, 0.276394 )
+texture = ExtResource( 2 )
+
+[node name="labState" parent="." instance=ExtResource( 3 )]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 3.0
+margin_top = 271.0
+margin_right = 1016.0
+margin_bottom = 313.0
+custom_fonts/font = SubResource( 1 )
+text = ""
+
+[node name="rectNext" type="ColorRect" parent="."]
+margin_left = 406.26
+margin_top = 479.0
+margin_right = 630.26
+margin_bottom = 534.0
+color = Color( 1, 0.843137, 0.572549, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="labNext" type="Label" parent="."]
+anchor_left = 0.292201
+anchor_top = 0.790295
+anchor_right = 0.736426
+anchor_bottom = 0.963605
+rect_min_size = Vector2( 450, 100 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Next >"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+[connection signal="pressed" from="btnMain" to="." method="_on_btnMain_pressed"]
+[connection signal="pressed" from="btnLocal" to="." method="_on_btnLocal_pressed"]
+[connection signal="pressed" from="btnSettings" to="." method="_on_btnSettings_pressed"]
+[connection signal="gui_input" from="labNext" to="." method="_on_labNext_gui_input"]

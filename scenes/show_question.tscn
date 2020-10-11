@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/show_question.gd" type="Script" id=1]
+[ext_resource path="res://scenes/others/AnswerBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resources/default_font.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 53
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BgColor" type="ColorRect" parent="."]
+margin_left = -9.70039
+margin_top = -6.14088
+margin_right = 1033.3
+margin_bottom = 609.859
+color = Color( 1, 0.858824, 0.854902, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnswersBox" type="GridContainer" parent="."]
+anchor_left = 0.0660881
+anchor_top = 0.139449
+anchor_right = 0.934252
+anchor_bottom = 0.924449
+custom_constants/vseparation = 71
+custom_constants/hseparation = 89
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AnswerBox1" parent="AnswersBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 400.0
+margin_bottom = 200.0
+
+[node name="AnswerBox2" parent="AnswersBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 489.0
+margin_right = 889.0
+margin_bottom = 200.0
+
+[node name="AnswerBox3" parent="AnswersBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 271.0
+margin_right = 400.0
+margin_bottom = 471.0
+
+[node name="AnswerBox4" parent="AnswersBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 489.0
+margin_top = 271.0
+margin_right = 889.0
+margin_bottom = 471.0
+
+[node name="labInfo" type="Label" parent="."]
+anchor_left = 0.0813773
+anchor_top = 0.459465
+anchor_right = 0.916338
+anchor_bottom = 0.586131
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="labInfo2" type="Label" parent="."]
+anchor_left = 0.0849609
+anchor_top = 0.00666667
+anchor_right = 0.919922
+anchor_bottom = 0.128333
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pick an answer:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
