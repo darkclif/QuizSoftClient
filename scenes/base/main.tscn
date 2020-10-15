@@ -1,0 +1,127 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://utils/label_progress.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/powered_by.png" type="Texture" id=2]
+[ext_resource path="res://resources/fonts/chocolate_small.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/base/main.gd" type="Script" id=4]
+[ext_resource path="res://resources/fonts/chocolate_big.tres" type="DynamicFont" id=5]
+[ext_resource path="res://resources/tools.png" type="Texture" id=6]
+[ext_resource path="res://resources/connect_button.png" type="Texture" id=7]
+[ext_resource path="res://resources/local.png" type="Texture" id=8]
+[ext_resource path="res://resources/connect_button_disabled.png" type="Texture" id=9]
+
+[node name="root" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="rectBgColor" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0.858824, 0.854902, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rectBgColor2" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -93.0
+color = Color( 1, 0.694118, 0.686275, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="logoBuba" type="Sprite" parent="."]
+position = Vector2( 60.1131, 57.1131 )
+scale = Vector2( 0.212177, 0.212177 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="labState" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -504.0
+margin_top = -9.0
+margin_right = 490.0
+margin_bottom = 31.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.568627, 0.568627, 0.568627, 1 )
+text = ""
+
+[node name="labNext" type="Label" parent="."]
+visible = false
+anchor_left = 0.791992
+anchor_top = 0.85
+anchor_right = 0.996094
+anchor_bottom = 0.99
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Next >"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="btnSettings" type="TextureButton" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -87.0
+margin_right = 95.0
+margin_bottom = -5.0
+texture_normal = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="btnConnect" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -181.0
+margin_top = -117.627
+margin_right = 181.0
+margin_bottom = -11.6273
+texture_normal = ExtResource( 7 )
+texture_disabled = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="btnDebug" type="TextureButton" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 104.0
+margin_top = -84.0
+margin_right = 184.0
+margin_bottom = -11.0
+texture_normal = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="gui_input" from="labNext" to="." method="_on_labNext_gui_input"]
+[connection signal="pressed" from="btnSettings" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="btnConnect" to="." method="_on_btnConnect_pressed"]
+[connection signal="pressed" from="btnDebug" to="." method="_on_btnDebug_pressed"]

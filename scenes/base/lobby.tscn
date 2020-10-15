@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/fonts/chocolate_big.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/others/player_icon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/base/lobby.gd" type="Script" id=3]
+[ext_resource path="res://resources/fonts/chocolate_small.tres" type="DynamicFont" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="rectBgColor" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0.858824, 0.854902, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rectBgColor2" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -78.0
+color = Color( 1, 0.694118, 0.686275, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="rectBgColor3" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_bottom = 136.0
+color = Color( 1, 0.694118, 0.686275, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="conPlayerIcon" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 25.4559
+margin_top = 14.1421
+margin_right = 125.456
+margin_bottom = 114.142
+
+[node name="labPlayerName" type="Label" parent="."]
+margin_left = 144.757
+margin_top = 44.7279
+margin_right = 995.757
+margin_bottom = 114.728
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Player Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="labInfo" type="Label" parent="."]
+anchor_left = 0.00390625
+anchor_top = 0.87
+anchor_right = 0.996094
+anchor_bottom = 0.995
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.352941, 0.352941, 0.352941, 1 )
+text = "Waiting for host"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+[connection signal="gui_input" from="conPlayerIcon" to="." method="_on_profile_edit"]

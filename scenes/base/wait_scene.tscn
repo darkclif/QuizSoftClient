@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/ready_on.png" type="Texture" id=1]
+[ext_resource path="res://scenes/base/wait_scene.gd" type="Script" id=2]
+[ext_resource path="res://resources/fonts/chocolate_small.tres" type="DynamicFont" id=3]
+[ext_resource path="res://resources/ready_off.png" type="Texture" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="rectBgColor" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0.858824, 0.854902, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rectBgColor2" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -78.0
+color = Color( 1, 0.694118, 0.686275, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="labInfo" type="Label" parent="."]
+anchor_left = 0.004
+anchor_top = 0.995
+anchor_right = 0.996094
+anchor_bottom = 0.995
+margin_left = -0.0960002
+margin_top = -75.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.352941, 0.352941, 0.352941, 1 )
+text = "Waiting for host"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="btnReady" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -112.0
+margin_top = -210.836
+margin_right = 112.0
+margin_bottom = -120.836
+texture_normal = ExtResource( 4 )
+texture_disabled = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="btnReady" to="." method="_on_TextureButton_pressed"]

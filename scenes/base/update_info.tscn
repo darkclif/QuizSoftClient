@@ -1,0 +1,246 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://resources/fonts/chocolate_small.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/others/player_icon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/base/update_info.gd" type="Script" id=3]
+[ext_resource path="res://resources/fonts/chocolate_big.tres" type="DynamicFont" id=4]
+[ext_resource path="res://resources/fonts/question_text.tres" type="DynamicFont" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BgColor" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0.858824, 0.854902, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rectBgColor3" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_bottom = 76.0
+color = Color( 1, 0.694118, 0.686275, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="rectBgColor2" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -78.0
+color = Color( 1, 0.694118, 0.686275, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="rectBgColor4" type="ColorRect" parent="."]
+anchor_left = 0.188
+anchor_top = 0.226
+anchor_right = 0.852742
+anchor_bottom = 0.226
+margin_left = -0.511993
+margin_top = -25.6
+margin_right = -0.208069
+margin_bottom = 25.4
+color = Color( 1, 0.694118, 0.686275, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="IconBox" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -258.0
+margin_top = -73.3945
+margin_right = 258.0
+margin_bottom = 130.605
+columns = 5
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Icon1" parent="IconBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 100.0
+margin_bottom = 100.0
+
+[node name="Icon2" parent="IconBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 100.0
+
+[node name="Icon3" parent="IconBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 100.0
+
+[node name="Icon4" parent="IconBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 100.0
+
+[node name="Icon5" parent="IconBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 100.0
+
+[node name="Icon6" parent="IconBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 104.0
+margin_right = 100.0
+margin_bottom = 204.0
+
+[node name="Icon7" parent="IconBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 104.0
+margin_top = 104.0
+margin_right = 204.0
+margin_bottom = 204.0
+
+[node name="Icon8" parent="IconBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 208.0
+margin_top = 104.0
+margin_right = 308.0
+margin_bottom = 204.0
+
+[node name="Icon9" parent="IconBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 312.0
+margin_top = 104.0
+margin_right = 412.0
+margin_bottom = 204.0
+
+[node name="Icon10" parent="IconBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 416.0
+margin_top = 104.0
+margin_right = 516.0
+margin_bottom = 204.0
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchor_left = 0.19
+anchor_top = 0.215
+anchor_right = 0.855
+anchor_bottom = 0.215
+margin_left = 65.3805
+margin_top = -22.0
+margin_right = -1.57947
+margin_bottom = 40.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Test"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ChoosenIcon" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.19
+anchor_top = 0.222297
+anchor_right = 0.19
+anchor_bottom = 0.222297
+margin_left = -50.2554
+margin_top = -50.1278
+margin_right = 49.7454
+margin_bottom = 49.8724
+
+[node name="labAccept" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -269.999
+margin_top = -78.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Accept >"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="labBack" type="Label" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -78.0
+margin_right = 198.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "< Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="labInfo" type="Label" parent="."]
+anchor_top = 0.00666667
+anchor_right = 0.995117
+anchor_bottom = 0.00666667
+margin_left = 3.0
+margin_bottom = 72.0002
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Choose your identity:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="labInfoBottom" type="Label" parent="."]
+anchor_left = 0.00536901
+anchor_top = 0.738234
+anchor_right = 1.0
+anchor_bottom = 0.738234
+margin_right = -2.50208
+margin_bottom = 49.0002
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.568627, 0.568627, 0.568627, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+[connection signal="gui_input" from="labAccept" to="." method="_on_accept"]
+[connection signal="gui_input" from="labBack" to="." method="_on_back"]

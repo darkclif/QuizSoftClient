@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://utils/console.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/debug/settings.gd" type="Script" id=2]
+
+[node name="settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.72009
+margin_top = 11.4401
+margin_right = -1753.28
+margin_bottom = -794.56
+script = ExtResource( 2 )
+
+[node name="bg_color" type="ColorRect" parent="."]
+margin_left = -16.0
+margin_top = -20.0
+margin_right = 1027.0
+margin_bottom = 596.0
+color = Color( 1, 0.858824, 0.854902, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="console" parent="." instance=ExtResource( 1 )]
+margin_left = 23.0
+margin_top = 21.0
+margin_right = 732.0
+margin_bottom = 560.0
+
+[node name="btnStartTCP" type="Button" parent="."]
+margin_left = 739.0
+margin_top = 21.0
+margin_right = 872.0
+margin_bottom = 77.0
+rect_pivot_offset = Vector2( 96.1479, 25.7566 )
+text = "TCP Start"
+
+[node name="btnStartUDP" type="Button" parent="."]
+margin_left = 882.0
+margin_top = 21.0
+margin_right = 1009.0
+margin_bottom = 79.0
+rect_pivot_offset = Vector2( 96.1479, 25.7566 )
+text = "UDP Start"
+
+[node name="btnBroadcast" type="Button" parent="."]
+margin_left = 880.0
+margin_top = 87.0
+margin_right = 1010.0
+margin_bottom = 141.0
+rect_pivot_offset = Vector2( 96.1479, 25.7566 )
+text = "where_server"
+
+[node name="btnExit" type="Button" parent="."]
+margin_left = 879.164
+margin_top = 506.377
+margin_right = 1012.16
+margin_bottom = 557.377
+rect_pivot_offset = Vector2( 96.1479, 25.7566 )
+text = "Back"
+
+[node name="btnConnectionWant" type="Button" parent="."]
+margin_left = 739.0
+margin_top = 86.0
+margin_right = 871.0
+margin_bottom = 142.0
+text = "connection_want"
+
+[node name="btnInfoUpdate" type="Button" parent="."]
+margin_left = 739.0
+margin_top = 148.0
+margin_right = 871.0
+margin_bottom = 205.0
+text = "info_update"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnGiveAnswer" type="Button" parent="."]
+margin_left = 737.0
+margin_top = 213.0
+margin_right = 871.0
+margin_bottom = 270.0
+text = "give_answer"
+
+[node name="btnIAmLost" type="Button" parent="."]
+margin_left = 736.0
+margin_top = 276.0
+margin_right = 872.0
+margin_bottom = 331.0
+text = "i_am_lost"
+
+[node name="btnPingReq" type="Button" parent="."]
+margin_left = 740.0
+margin_top = 443.0
+margin_right = 874.0
+margin_bottom = 499.0
+text = "ping_req"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="btnStartTCP" to="." method="_on_btnStartTCP_pressed"]
+[connection signal="pressed" from="btnStartUDP" to="." method="_on_btnStartUDP_pressed"]
+[connection signal="pressed" from="btnBroadcast" to="." method="_on_btnBroadcast_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btnExit_pressed"]
+[connection signal="pressed" from="btnConnectionWant" to="." method="_on_btnConnectionWant_pressed"]
